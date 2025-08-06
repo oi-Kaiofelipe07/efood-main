@@ -7,7 +7,7 @@ import { Close, List, Modal, ModalContainer, ModalContent } from "./styles";
 
 import closeIcon from '../../Assets/images/close 1.png'
 import { useDispatch } from "react-redux";
-import {add, open, close} from '../../store/reducers/cart'
+import {add, open } from '../../store/reducers/cart'
 import { formataPreco } from "../../Components/Cart";
 
 type ModalState = {
@@ -79,7 +79,7 @@ const ProductList = () => {
                                 <h4>{selectedProduct.nome}</h4>
                                 
                                 <p>{selectedProduct.descricao}</p>
-                                <span>{selectedProduct.porcao}</span>
+                                <span>Serve de: {selectedProduct.porcao}</span>
                                 <button onClick={addToCart}>Adicionar ao carrinho {formataPreco(selectedProduct.preco)}</button>
                                 
                             </div>

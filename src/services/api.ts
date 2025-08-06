@@ -5,7 +5,7 @@ export type Product = {
     id: number
     price: number
 }
-  
+
 export type PurchasePayload = {
     products: Product[]
     delivery: {
